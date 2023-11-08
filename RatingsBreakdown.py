@@ -1,5 +1,9 @@
+'''
+Counts how many reviews each movie had
+'''
 from mrjob.job import MRJob
 from mrjob.step import MRStep
+
 
 class RatingsBreakdown(MRJob):
     def steps(self):
@@ -14,6 +18,7 @@ class RatingsBreakdown(MRJob):
 
     def reducer_count_ratings(self, key, values):
         yield key, sum(values)
+
 
 if __name__ == '__main__':
     RatingsBreakdown.run()

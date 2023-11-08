@@ -1,3 +1,6 @@
+'''
+Counts and orders movies by how many reviews each movie had
+'''
 from mrjob.job import MRJob
 from mrjob.step import MRStep
 
